@@ -31,4 +31,12 @@ describe "StaticPages" do
       expect(page).to have_title('Contact')
     end
   end
+  
+  describe "Home page" do
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title('| Home')
+    end
+  end
+  
 end

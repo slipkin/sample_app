@@ -8,17 +8,8 @@ SampleApp::Application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
-  # Enable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = true
-
   # Compress JavaScripts and CSS
   config.assets.compress = true
-
-  # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = false
-
-  # Generate digests for assets URLs
-  config.assets.digest = true
 
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
@@ -67,4 +58,9 @@ SampleApp::Application.configure do
 
   # Deprecated call
   config.eager_load = true
+
+  config.cache_classes = true
+  config.serve_static_assets = true
+  config.assets.compile = true
+  config.assets.digest = true
 end
